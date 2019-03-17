@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Class Color</title>
+</head>
+<body>
+
+<script type="text/javascript" src="newColor.js"></script>
+<script>
+
+const colorUser = new NewColor();
+console.log('avr RGB:', colorUser.avrColor('rgb(215,25,25)','#ddee80'));
+console.log(colorUser.fromRGBtoHEX('rgb(215,255,255)'));
+console.log(colorUser.fromHEXtoRGB('#FF55ff'));
+
+const colorUserHEX = new NewColor();
+console.log('avr HEX:',colorUserHEX.avrColor('#ffdd44','rgb(254,254,254)'));
+
+var body = document.querySelector('body');
+body.style.backgroundColor = colorUser.avrColor('rgb(215,25,25)','#ffffff');
+
+</script>
+</body>
+</html>
